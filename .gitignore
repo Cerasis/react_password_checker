@@ -1,0 +1,57 @@
+# dependencies
+*/node_modules/
+node_modules/
+/.pnp
+.pnp.js
+
+# production
+client/build/
+
+*.log
+
+######################
+# Visual Studio Code
+######################
+.vscode/
+client/.vscode/
+
+######################
+# SonarQube
+######################
+.scannerwork/
+client/.scannerwork
+
+######################
+# Others
+######################
+*.pyc
+*.class
+*.*~
+*~
+.merge_file*
+
+######################
+# Allure
+######################
+reports/
+allure-report/
+
+######################
+# Python Cache
+######################
+.pytest_cache/
+__pycache__/
+
+# Should prevent push of credentials
+docker-compose.yml
+
+######################
+#.idea
+######################
+.idea/
+client/.idea/
+
+
+### build files
+*.tar
+*.tar.gz
