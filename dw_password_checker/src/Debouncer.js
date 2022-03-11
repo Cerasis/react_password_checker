@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 //Implements debouncing
 //Triggers debounce delay on text typed
@@ -12,7 +12,7 @@ export default function useDebounce(value, delay) {
     return () => {
       clearTimeout(handler);
     };
-  }, [value]);
+  }, [value, delay]);
 
   return debouncedValue;
 }

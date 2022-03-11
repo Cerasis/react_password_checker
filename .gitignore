@@ -5,7 +5,7 @@ node_modules/
 .pnp.js
 
 # production
-client/build/
+*/build/
 
 *.log
 
@@ -16,12 +16,6 @@ client/build/
 client/.vscode/
 
 ######################
-# SonarQube
-######################
-.scannerwork/
-client/.scannerwork
-
-######################
 # Others
 ######################
 *.pyc
@@ -29,21 +23,6 @@ client/.scannerwork
 *.*~
 *~
 .merge_file*
-
-######################
-# Allure
-######################
-reports/
-allure-report/
-
-######################
-# Python Cache
-######################
-.pytest_cache/
-__pycache__/
-
-# Should prevent push of credentials
-docker-compose.yml
 
 ######################
 #.idea

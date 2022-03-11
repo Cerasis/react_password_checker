@@ -37,23 +37,11 @@ function App() {
       .then((response) => setCheckResponse(response.data));
   }, [deboucedSearchString]);
 
-  const barColor = (value) => {
-    if (value < 2) return "danger";
-    else if (value < 3) return "warning";
-    else if (value <= 4) return "success";
+  const barColor = () => {
+    if (score < 2) return "danger";
+    else if (score < 3) return "warning";
+    else if (score <= 4) return "success";
   };
-
-  function progressBar() {
-    return (
-      <Progress multi>
-        {score >= 0 && <Progress bar color={barColor(score)} value="20" />}
-        {score >= 1 && <Progress bar color={barColor(score)} value="20" />}
-        {score >= 2 && <Progress bar color={barColor(score)} value="20" />}
-        {score >= 3 && <Progress bar color={barColor(score)} value="20" />}
-        {score >= 4 && <Progress bar color={barColor(score)} value="20" />}
-      </Progress>
-    );
-  }
 
   return (
     <div className="App">
@@ -71,7 +59,7 @@ function App() {
               onChange={onChange}
             />
           </FormGroup>
-          {progressBar()}
+          <Progress color={barColor()} value={score} max={4} />
         </Form>
         {(guessTimeString || warning) && (
           <h5>
